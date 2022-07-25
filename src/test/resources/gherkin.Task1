@@ -1,0 +1,12 @@
+Feature: Create new address
+
+  Scenario: user can log in and create new address
+    Given Browser with open page at address https://mystore-testlab.coderslab.pl
+    When SingIn email <atqqbdyresgdnwksue@nthrl.com> passworld <Alex!>
+    And Entered <Edytaa!> in the Alias
+    And Entered <ul. Marka 11, Warszawa> in the Address
+    And Entered <11-254> in the Zip/Postal Code
+    And Entered <United Kingdom> in the Country
+    And Entered <555 525 525> in the phone
+    And Clicked Save
+    Then check in the date address
